@@ -1,13 +1,18 @@
 import React from 'react';
+import { Message as MessageType } from '/imports/api/type';
 
 type Props = {
+  message: MessageType
 };
 
-const Index: React.FC<Props> = ({ }) => {
-  return (<></>);
+const Message: React.FC<Props> = ({ message }) => {
+
+  return (<div className="text-white">
+    {message.message}
+  </div>);
 }
 
-Index.defaultProps = {
+Message.defaultProps = {
 };
 
-export default Index;
+export default Message;

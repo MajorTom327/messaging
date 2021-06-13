@@ -24,10 +24,10 @@ export const App = () => {
         {R.isNil(selected) ? (
           <div className="bg-gray-200">Select something bro</div>
         ) : (
-          <>
+          <div className="flex w-full flex-col gap-4">
             <MessageList discussion={selected!} />
             <SendMessage discussion={selected!} />
-          </>
+          </div>
         )}
 
       </div>
