@@ -1,11 +1,11 @@
 import React from 'react';
-import { Hello } from './Hello';
-import { Info } from './Info';
+import DiscussionList from './components/DiscussionList';
 
 export const App = () => (
-  <div>
-    <h1>Welcome to Meteor!</h1>
-    <Hello />
-    <Info />
+  <div className="grid grid-cols-7">
+    <div className="col-span-2">
+      <DiscussionList />
+    </div>
+
   </div>
 );
