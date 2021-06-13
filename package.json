@@ -13,6 +13,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "classnames": "^2.3.1",
+    "luxon": "^1.27.0",
     "meteor-node-stubs": "^1.0.1",
     "ramda": "^0.27.1",
     "react": "^16.13.1",
@@ -20,6 +21,7 @@
     "tailwindcss": "^2.1.4"
   },
   "devDependencies": {
+    "@types/luxon": "^1.27.0",
     "@types/meteor": "^1.4.49",
     "@types/mocha": "^8.0.3",
     "@types/react": "^16.9.49",

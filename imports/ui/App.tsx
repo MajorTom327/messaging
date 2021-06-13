@@ -15,12 +15,12 @@ const chatStyle = {
 export const App = () => {
   const [selected, setSelected] = useState<string | null>(null);
   return (
-    <div className="grid grid-cols-4 sm:grid-cols-7 lg:grid-cols-9">
+    <div style={chatStyle} className="grid grid-cols-4 sm:grid-cols-7 lg:grid-cols-9 bg-cover bg-opacity-50">
       <div className="col-span-2 ">
         <DiscussionList selected={selected} onSelect={setSelected} />
       </div>
 
-      <div style={chatStyle} className="h-full w-full col-span-2 sm:col-span-5 lg:col-span-7 bg-cover bg-opacity-75 p-2">
+      <div className="h-full w-full col-span-2 sm:col-span-5 lg:col-span-7   p-2">
         {R.isNil(selected) ? (
           <div className="bg-gray-200">Select something bro</div>
         ) : (

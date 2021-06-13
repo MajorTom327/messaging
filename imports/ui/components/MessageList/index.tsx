@@ -12,7 +12,7 @@ const MessageList: React.FC<Props> = ({ discussion }) => {
   if (!ready) return (<div className="flex justify-center text-white font-semibold">Chargement...</div>);
 
   return (
-    <div className="flex-grow text-white">
+    <div className="flex-grow text-white grid grid-cols-10 gap-4">
       {messages.map((message) => <Message key={message._id} message={message} />)}
     </div>
   );

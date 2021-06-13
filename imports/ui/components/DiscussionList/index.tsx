@@ -16,9 +16,11 @@ const DiscussionList: React.FC<Props> = ({ selected, onSelect }) => {
 
   const { ready, discussions } = useDiscussions();
 
+  // backdrop-filter backdrop-blur-lg
+
   if (!ready) return (<>Chargement...</>);
   return (
-    <div className="w-full bg-gray-700 h-screen flex flex-col justify-between">
+    <div className="w-full bg-gray-700 bg-opacity-50 h-screen flex flex-col justify-between backdrop-filter backdrop-blur-lg">
       <div>
         {discussions.map((discussion) => <Discussion onSelect={onSelect} selected={discussion._id === selected} key={discussion._id} discussion={discussion} />)}
       </div>

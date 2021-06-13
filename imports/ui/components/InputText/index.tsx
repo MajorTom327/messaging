@@ -16,7 +16,7 @@ const InputText: React.FC<Props> = ({ value, onChange, placeholder }) => {
 
   const classes = classNames(
     "w-full p-2 focus:outline-none",
-    "border rounded-lg",
+    "rounded-lg",
     "bg-gray-500 bg-opacity-50"
   )
 
