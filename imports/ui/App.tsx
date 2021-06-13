@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
 import DiscussionList from './components/DiscussionList';
+import MessageList from './components/MessageList';
+import * as R from 'ramda'
+import SendMessage from './components/SendMessage';
+
+const chatStyle = {
+  // background-blend-mode
+  backgroundBlendMode: 'normal',
+  backgroundImage: `
+  radial-gradient(circle, transparent 50%, #000 100%),
+  url(/assets/earth.jpg)`
+}
 
 export const App = () => {
   const [selected, setSelected] = useState<string | null>(null);
@@ -9,7 +20,15 @@ export const App = () => {
         <DiscussionList selected={selected} onSelect={setSelected} />
       </div>
 
-      <div>
+      <div style={chatStyle} className="h-full w-full col-span-2 sm:col-span-5 lg:col-span-7 bg-cover bg-opacity-75 p-2">
+        {R.isNil(selected) ? (
+          <div className="bg-gray-200">Select something bro</div>
+        ) : (
+          <>
+            <MessageList discussion={selected!} />
+            <SendMessage discussion={selected!} />
+          </>
+        )}
 
       </div>
 
